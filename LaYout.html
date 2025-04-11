@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        }
+            img {
+            width: 60px;
+            display:block
+        }
+        .ejerecicio1 {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background-color: gray;
+        }
+
+        .ejercicio2 {
+            resize: both;
+            overflow: auto;
+            display: grid;
+            background-color: lightblue;
+            place-items: center;
+        }
+
+        .ejercicio2 div {
+            background-color: yellow;
+        }
+
+        .ejerecicio3 {
+            resize: both;
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: lightblue;
+            justify-content: center;
+        }
+
+        .ejerecicio3 div {
+            flex: 0 1 150px;
+            margin: 5px;
+            background-color: yellow;
+        }
+
+        .ejerecicio4 {
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: minmax(150px, 25%) 1fr;
+            background-color: lightblue;
+        }
+
+        .ejerecicio4-1 {
+            background-color: yellow;
+        }
+
+        .ejerecicio4-2 {
+            background-color: pink;
+        }
+
+        .ejerecicio5 {
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            background-color: lightblue;
+        }
+
+        .ejerecicio5-1 {
+            background-color: yellow;
+        }
+
+        .ejerecicio5-2 {
+            background-color: salmon;
+        }
+
+        .ejerecicio5-3 {
+            background-color: pink;
+        }
+
+        .ejerecicio6 {
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto 1fr auto;
+            background-color: lightblue;
+        }
+
+        .ejerecicio6-1 {
+            background-color: pink;
+            grid-column: 1 / 4;
+        }
+
+        .ejercicio6-2 {
+            background-color: blue;
+        }
+
+        .ejercicicio6-3 {
+            background-color: salmon;
+        }
+
+        .ejerecicio6-4 {
+            background-color: yellow;
+        }
+
+        .ejerecicio6-5 {
+            background-color: green;
+            grid-column: 1 / 4;
+        }
+
+        .ejerecicio7 {
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+
+        .ejerecicio7-1 {
+            background-color: pink;
+        }
+
+        .ejerecicio7-2 {
+            background-color: lightblue;
+        }
+
+        .ejerecicio7-3 {
+            background-color: salmon;
+        }
+
+        .ejerecicio7-4 {
+            background-color: yellow;
+        }
+
+        .ejerecicio8 {
+            resize: both;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            padding: 1em;
+            border: 1px solid blue;
+        }
+
+        .ejerecicio8-1 {
+            background-color: pink;
+        }
+
+        .ejercicio8-2 {
+            background-color: lightblue;
+        }
+
+        .ejerecicio8-3 {
+            background-color: salmon;
+        }
+
+        .ejerecicio8-4 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>🤖</span>
+        <span>RobotWeb</span>
+        <span>🔎</span>
+    </header>
+
+    <section>
+        <img src="1.webp">
+        <img src="2.webp">
+        <img src="3.webp">
+        <img src="4.webp">
+        <p class="ejerecicio1">Welcome to RobotWeb</p>
+    </section>
+
+    <section>
+        <h3>Ejercicio 2:</h3>
+        <div class="ejercicio2">
+            <div>Estoy siempre centrado</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Ejerecicio 3:</h3>
+        <div class="ejerecicio3">
+            <div>Crezco hacia abajo y tengo un ancho máximo de 150px</div>
+            <div>Crezco hacia abajo y tengo un ancho máximo de 150px</div>
+            <div>Crezco hacia abajo y tengo un ancho máximo de 150px</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Ejercicio 4:</h3>
+        <div class="ejerecicio4">
+            <div class="ejerecicio4-1">Tengo un ancho mínimo de 150px, y un máximo del 25%</div>
+            <div class="ejerecicio4-2">Ocupo el resto de espacio sobrante</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Ejercicio 5:</h3>
+        <div class="ejerecicio5">
+            <div class="ejerecicio5-1">Ocupo solo la altura que necesito</div>
+            <div class="ejerecicio5-2">Ocupo el resto de altura sobrante</div>
+            <div class="ejerecicio5-3">Ocupo solo la altura que necesito</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Ejercicio 6:</h3>
+        <div class="ejerecicio6">
+            <div class="ejerecicio6-1">Esto ocupa el ancho que necesito </div>
+            <div class="ejerecicio6-2">Esto ocupa el ancho que necesito,</br> aqui crezco de altura </div>
+            <div class="ejerecicio6-3">Esto ocupa el ancho que necesito,</br> aqui crezco de altura </div>
+            <div class="ejerecicio6-4">,</br> aqui crezco de altura </div>
+            <div class="ejerecicio6-5">Esto ocupa la altura que necesito</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Ejercicio 7:</h3>
+        <div class="ejerecicio7">
+            <div class="ejerecicio7-1" >Tenemos  un ancho <b>mínimo</b> de 100px. Si no cabemos todos en una fila, ocupamos otra</div>
+            <div class="ejerecicio7-2" >Tenemos un ancho <b>mínimo</b> de 100px. Si no cabemos todos en una fila, ocupamos otra</div>
+            <div class="ejerecicio7-3" >Tenemos un ancho <b>mínimo</b> de 100px. Si no cabemos todos en una fila, ocupamos otra</div>
+            <div class="ejerecicio7-4" >Tenemos un ancho <b>mínimo</b> de 100px. Si no cabemos todos en una fila, ocupamos otra</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Ejercicio 8:</h3>
+        <div class="ejerecicio8">
+            <div class="ejerecicio8-1" >Tenemos un ancho de 100px. Si no cabemos todos en una fila, ocupamos otra</div>
+            <div class="ejercicio8-2" >Tenemos un ancho de 100px. Si no cabemos todos en una fila, ocupamos otra</div>
+            <div class="ejerecicio8-3" >Tenemos un ancho de 100px. Si no cabemos todos en una fila, ocupamos otra</div>
+            <div class="ejerecicio8-4" >Tenemos un ancho de 100px. Si no cabemos todos en una fila, ocupamos otra</div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+	
